@@ -1,0 +1,179 @@
+
+/* General */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+}
+
+.card-title, .name {
+    font-size: 16px;
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    margin: 0;
+}
+
+.card-text, .date {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: hsl(217, 19%, 35%);
+    margin: 0;
+}
+
+.name,
+.footer-2 p {
+    font-size: 13.5px;
+}
+
+
+/* Card */
+/* card general */
+.card {
+    max-width: 326px;
+    margin: 74px 0 57px;
+    border-radius: 8px;
+}
+
+/* card top image */
+.card-img-top {
+    border-radius: 8px 8px 0 0;
+}
+
+/* card body */
+.card-body {
+    padding: 40px 30px 1rem;
+}
+
+.card-text-wrap {
+    margin-top: 1rem;
+}
+
+/*card footer */
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: inherit;
+    border: none;
+    padding: 1rem 2rem;
+}
+
+.card-footer img {
+    border-radius: 100%;
+    width: 40px;
+    height: auto;
+}
+
+.user {
+    display: flex;
+    gap: 1rem;
+}
+
+/* share icon box */
+.share-icon {
+    background-color: hsl(210, 46%, 95%);
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+    padding: 0 7.5px;
+}
+
+.share-icon img {
+    width: 100%;
+}
+
+/* Active state footer */
+.footer-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    background-color: hsl(214, 17%, 51%);
+    border-radius:  0 0 8px 8px;
+    color: hsl(212, 23%, 69%);
+    padding: 0 2rem;
+    height: 72px;
+}
+
+.footer-2 p {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-2 .share-icon {
+    background-color: hsl(212, 23%, 69%);
+}
+
+/* hide element class */
+.hidden {
+    visibility: hidden;
+    position: absolute;
+}
+
+
+/* Large Screens */
+@media (min-width:760px) {
+    .card {
+        max-width: 790px;
+        margin: 74px 0 57px;
+    }
+
+    .card-img {
+        border-radius: 8px 0 0 8px;
+    }
+
+    .card-body {
+        padding: 35px 40px 1rem;
+    }
+
+    .footer-2 {
+        border-radius:  0 0 8px 0;
+    }
+
+    /* Popover styles */
+    .pop-over {
+        position: absolute;
+        bottom: 95px;
+        right: -70px;
+        border-radius: 8px;
+        height: 55px;
+        width: 245px;
+    }
+
+    .pop-over::after {
+        content: '';
+        position: absolute;
+        bottom: -25px; /* Position below the box */
+        left: 110px; /* Adjust for arrow position */
+        border-width:  15px; /* Size of the arrow */
+        border-style: solid;
+        border-color: hsl(214, 17%, 51%) transparent transparent transparent; /* Top arrow color matches the box */
+    }
+}
